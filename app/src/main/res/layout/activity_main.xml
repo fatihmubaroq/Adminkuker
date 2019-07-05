@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/darker_gray">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/accent"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_icon"
+            android:id="@+id/imageView4" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pelaporan Kekerasan"
+            android:textSize="27sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_horizontal"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/imageView4"
+            android:layout_toEndOf="@+id/imageView4" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/value_10dp"
+        android:paddingLeft="@dimen/value_10dp"
+        android:paddingRight="@dimen/value_10dp"
+        android:layout_below="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/txt_tahun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tahun"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/txt_zis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bulan"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.11"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tahun"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/sp_tahun"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ZIS"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/sp_zis"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/cari"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:scaleType="fitEnd"
+                android:background="@null"
+                android:src="@drawable/ic_search_black_24dp" />
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/pb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_notif"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="@color/colorPrimaryDark"
+        android:padding="@dimen/value_5dp"
+        android:text="@string/notif"
+        android:textColor="@color/white" />
+
+
+
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/material_design_android_floating_action_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginRight="11dp"
+        fab:menu_animationDelayPerItem="55"
+        fab:menu_backgroundColor="@android:color/transparent"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="#25c0f4"
+        fab:menu_colorPressed="#1248e9"
+        fab:menu_colorRipple="#99d4d4d4"
+        fab:menu_fab_label="Menu"
+        fab:menu_fab_size="normal"
+        fab:menu_icon="@drawable/ic_menu_black_24dp"
+        fab:menu_labels_colorNormal="#333"
+        fab:menu_labels_colorPressed="#444"
+        fab:menu_labels_colorRipple="#66efecec"
+        fab:menu_labels_cornerRadius="3dp"
+        fab:menu_labels_ellipsize="none"
+        fab:menu_labels_hideAnimation="@anim/fab_slide_out_to_right"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_maxLines="-1"
+        fab:menu_labels_padding="8dp"
+        fab:menu_labels_position="left"
+        fab:menu_labels_showAnimation="@anim/fab_slide_in_from_right"
+        fab:menu_labels_showShadow="true"
+        fab:menu_labels_singleLine="false"
+        fab:menu_labels_textColor="#f2f1f1"
+        fab:menu_labels_textSize="15sp"
+        fab:menu_openDirection="up"
+        fab:menu_shadowColor="#66aff198"
+        fab:menu_shadowRadius="4dp"
+        fab:menu_shadowXOffset="1dp"
+        fab:menu_shadowYOffset="4dp"
+        fab:menu_showShadow="true">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/material_design_floating_action_menu_item1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_queue_black_24dp"
+            fab:fab_label="Tambah Berita"
+            fab:fab_colorNormal="#f42555"
+            fab:fab_colorPressed="#e912a1"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/material_design_floating_action_menu_item2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_forum_black_24dp"
+            fab:fab_label="Chating"
+            fab:fab_colorNormal="#eaf425"
+            fab:fab_colorPressed="#ace912"
+            fab:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/material_design_floating_action_menu_item3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_person_black_24dp"
+            fab:fab_label="Akun"
+            fab:fab_colorNormal="#25f441"
+            fab:fab_colorPressed="#12e985"
+            fab:fab_size="mini" />
+    </com.github.clans.fab.FloatingActionMenu>
+
+</RelativeLayout>
